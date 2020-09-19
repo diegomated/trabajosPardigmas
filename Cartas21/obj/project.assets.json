@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yeyod\\source\\repos\\Juego De Cartas\\Cartas21.csproj",
+      "projectUniqueName": "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Cartas21.csproj",
       "projectName": "Cartas21",
-      "projectPath": "C:\\Users\\yeyod\\source\\repos\\Juego De Cartas\\Cartas21.csproj",
+      "projectPath": "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Cartas21.csproj",
       "packagesPath": "C:\\Users\\yeyod\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yeyod\\source\\repos\\Juego De Cartas\\obj\\",
+      "outputPath": "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yeyod\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Juego_De_Cartas
+namespace Cartas21
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

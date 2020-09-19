@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Juego_De_Cartas
+namespace Cartas21
 {
     /// <summary>
     /// Interaction logic for App.xaml
