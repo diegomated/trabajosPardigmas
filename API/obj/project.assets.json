@@ -1,33 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
-      "API/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/API.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/API.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WPF"
-        ]
-      }
-    }
+    ".NETCoreApp,Version=v3.1": {}
   },
-  "libraries": {
-    "API/1.0.0": {
-      "type": "project",
-      "path": "../API/API.csproj",
-      "msbuildProject": "../API/API.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "API >= 1.0.0"
-    ]
+    ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
     "C:\\Users\\yeyod\\.nuget\\packages\\": {}
@@ -35,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Game.csproj",
-      "projectName": "Game",
-      "projectPath": "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Game.csproj",
+      "projectUniqueName": "C:\\Users\\yeyod\\source\\repos\\trabajos\\API\\API.csproj",
+      "projectName": "API",
+      "projectPath": "C:\\Users\\yeyod\\source\\repos\\trabajos\\API\\API.csproj",
       "packagesPath": "C:\\Users\\yeyod\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\obj\\",
+      "outputPath": "C:\\Users\\yeyod\\source\\repos\\trabajos\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yeyod\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,11 +32,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {
-            "C:\\Users\\yeyod\\source\\repos\\trabajos\\API\\API.csproj": {
-              "projectPath": "C:\\Users\\yeyod\\source\\repos\\trabajos\\API\\API.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

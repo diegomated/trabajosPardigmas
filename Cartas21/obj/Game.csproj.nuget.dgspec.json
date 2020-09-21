@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Cartas21.csproj": {}
+    "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Game.csproj": {}
   },
   "projects": {
     "C:\\Users\\yeyod\\source\\repos\\trabajos\\API\\API.csproj": {
@@ -59,12 +59,12 @@
         }
       }
     },
-    "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Cartas21.csproj": {
+    "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Cartas21.csproj",
-        "projectName": "Cartas21",
-        "projectPath": "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Cartas21.csproj",
+        "projectUniqueName": "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Game.csproj",
+        "projectName": "Game",
+        "projectPath": "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\Game.csproj",
         "packagesPath": "C:\\Users\\yeyod\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\yeyod\\source\\repos\\trabajos\\Cartas21\\obj\\",
         "projectStyle": "PackageReference",

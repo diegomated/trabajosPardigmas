@@ -6,7 +6,5 @@
         xmlns:local="clr-namespace:Cartas21"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <Grid Background="#FF60915F"/>
 </Window>

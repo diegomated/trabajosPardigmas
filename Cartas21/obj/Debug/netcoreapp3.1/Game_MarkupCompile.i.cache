@@ -1,11 +1,11 @@
-﻿Cartas21
+﻿Game
 
 
 winexe
 C#
 .cs
 C:\Users\yeyod\source\repos\trabajos\Cartas21\obj\Debug\netcoreapp3.1\
-Cartas21
+Game
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
@@ -16,5 +16,5 @@ C:\Users\yeyod\source\repos\trabajos\Cartas21\App.xaml
 1931284467603
 MainWindow.xaml;
 
-True
+False
 
