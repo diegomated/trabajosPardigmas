@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace API
 {
-    class Dealer
+    public class Dealer
     {
         private string[] deck;
         private string[] hand;
@@ -13,6 +11,7 @@ namespace API
         public Dealer()
         {
             cartas = new Card();
+            deck = Generate();
         }
 
         public string[] Deck { get => deck; set => deck = value; }
@@ -31,6 +30,7 @@ namespace API
                 for (int a = 0; a < 14; a++)
                 {
                     baraja[cont] = suit[a] + symbol[i];
+                    cont = cont + 1;
                 }
             }
             return baraja;
@@ -58,17 +58,24 @@ namespace API
             deck = listaC;
         }
 
+
         public string Deal()
         {
             string cont;
             string retorno = deck[0];
 
-            for(int i = 0; i < deck.Length-1; i++)
+            for(int i = 0; i < deck.Length; i++)
             {
-                cont = deck[i + 1];
-                deck[i] = cont;
+                if (i == deck.Length - 1)
+                {
+                    deck[i] = "";
+                }
+                else
+                {
+                    cont = deck[i + 1];
+                    deck[i] = cont;
+                }
             }
-            
             return retorno;
         }
 

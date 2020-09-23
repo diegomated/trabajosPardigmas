@@ -1,22 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace API
 {
-    class Player
+    public class Player
     {
         private string[] hand;
 
+        public string[] Hand { get => hand; set => hand = value; }
+
         public void AddCard(string carta)
         {
-            hand = new string[10];
+            Hand = new string[10];
             int cont = 0;
-            while (cont < hand.Length)
+            while (cont < Hand.Length)
             {
-                if (hand[cont] == null)
+                if (Hand[cont] == null)
                 {
-                    hand[cont] = carta;
+                    Hand[cont] = carta;
                     break;
                 }
                 else
