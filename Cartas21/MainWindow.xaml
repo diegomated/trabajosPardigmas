@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FF60915F">
         <Button Name="btnAdd" Content="Agregar" HorizontalAlignment="Left" Margin="240,329,0,0" VerticalAlignment="Top" Height="51" Width="106" Click="btnAdd_Click"/>
-        <Button Name="btnPtr" Content="Plantar" HorizontalAlignment="Left" Margin="422,329,0,0" VerticalAlignment="Top" Height="51" Width="106"/>
+        <Button Name="btnPtr" Content="Plantar" HorizontalAlignment="Left" Margin="422,329,0,0" VerticalAlignment="Top" Height="51" Width="106" Click="btnPtr_Click"/>
         <Rectangle HorizontalAlignment="Left" Height="165" Margin="33,28,0,0" Stroke="Black" VerticalAlignment="Top" Width="313" Fill="White"/>
         <Rectangle HorizontalAlignment="Left" Height="165" Margin="422,28,0,0" Stroke="Black" VerticalAlignment="Top" Width="340" Fill="White"/>
         <TextBox Name="txtcarta1" HorizontalAlignment="Left" Height="40" Margin="41,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
