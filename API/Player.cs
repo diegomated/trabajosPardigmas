@@ -5,23 +5,22 @@ namespace API
     public class Player
     {
         private string[] hand;
-
+        
         public string[] Hand { get => hand; set => hand = value; }
+
+        public Player()
+        {
+            Hand = new string[10];
+        }
 
         public void AddCard(string carta)
         {
-            Hand = new string[10];
-            int cont = 0;
-            while (cont < Hand.Length)
+            for (int i = 0; i < hand.Length; i++)
             {
-                if (Hand[cont] == null)
+                if (hand[i] == null)
                 {
-                    Hand[cont] = carta;
+                    hand[i] = carta;
                     break;
-                }
-                else
-                {
-                    cont = cont + 1;
                 }
             }
         }
@@ -31,6 +30,7 @@ namespace API
             AddCard(carta1);
             AddCard(carta2);
         }
+
 
     }
 }

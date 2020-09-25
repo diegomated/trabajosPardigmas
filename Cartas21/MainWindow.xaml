@@ -11,20 +11,20 @@
         <Button Name="btnPtr" Content="Plantar" HorizontalAlignment="Left" Margin="422,329,0,0" VerticalAlignment="Top" Height="51" Width="106"/>
         <Rectangle HorizontalAlignment="Left" Height="165" Margin="33,28,0,0" Stroke="Black" VerticalAlignment="Top" Width="313" Fill="White"/>
         <Rectangle HorizontalAlignment="Left" Height="165" Margin="422,28,0,0" Stroke="Black" VerticalAlignment="Top" Width="340" Fill="White"/>
-        <TextBox Name="txtcarta1" HorizontalAlignment="Left" Height="40" Margin="41,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="25"/>
-        <TextBox Name="txtcarta2" HorizontalAlignment="Left" Height="40" Margin="105,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="25"/>
-        <TextBox Name="txtcarta3" HorizontalAlignment="Left" Height="40" Margin="170,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="25"/>
-        <TextBox Name="txtcarta4" HorizontalAlignment="Left" Height="40" Margin="229,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="25"/>
-        <TextBox Name="txtcarta5" HorizontalAlignment="Left" Height="40" Margin="293,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="25"/>
+        <TextBox Name="txtcarta1" HorizontalAlignment="Left" Height="40" Margin="41,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
+        <TextBox Name="txtcarta2" HorizontalAlignment="Left" Height="40" Margin="105,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
+        <TextBox Name="txtcarta3" HorizontalAlignment="Left" Height="40" Margin="170,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
+        <TextBox Name="txtcarta4" HorizontalAlignment="Left" Height="40" Margin="229,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
+        <TextBox Name="txtcarta5" HorizontalAlignment="Left" Height="40" Margin="293,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
         <Label Content="Jugador" HorizontalAlignment="Left" Margin="33,2,0,0" VerticalAlignment="Top" Width="169"/>
         <Label Content="Dealer" HorizontalAlignment="Left" Margin="423,2,0,0" VerticalAlignment="Top" Width="169"/>
-        <Label Name="lblCont1" Content="" HorizontalAlignment="Left" Margin="202,342,0,0" VerticalAlignment="Top" Width="38" Visibility="Hidden"/>
-        <Label Name="lblCont2" Content="" HorizontalAlignment="Left" Margin="528,343,0,0" VerticalAlignment="Top" Width="38" Visibility="Hidden"/>
-        <TextBox Name="txtcartaD1" HorizontalAlignment="Left" Height="40" Margin="449,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="25"/>
-        <TextBox Name="txtcartaD2" HorizontalAlignment="Left" Height="40" Margin="513,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="25"/>
-        <TextBox Name="txtcartaD3" HorizontalAlignment="Left" Height="40" Margin="578,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="25"/>
-        <TextBox Name="txtcartaD4" HorizontalAlignment="Left" Height="40" Margin="637,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="25"/>
-        <TextBox Name="txtcartaD5" HorizontalAlignment="Left" Height="40" Margin="701,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="25"/>
+        <Label Name="lblCont1" Content="0" HorizontalAlignment="Left" Margin="202,342,0,0" VerticalAlignment="Top" Width="38" Visibility="Hidden"/>
+        <Label Name="lblCont2" Content="0" HorizontalAlignment="Left" Margin="528,343,0,0" VerticalAlignment="Top" Width="38" Visibility="Hidden"/>
+        <TextBox Name="txtcartaD1" HorizontalAlignment="Left" Height="40" Margin="449,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
+        <TextBox Name="txtcartaD2" HorizontalAlignment="Left" Height="40" Margin="513,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
+        <TextBox Name="txtcartaD3" HorizontalAlignment="Left" Height="40" Margin="578,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
+        <TextBox Name="txtcartaD4" HorizontalAlignment="Left" Height="40" Margin="637,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
+        <TextBox Name="txtcartaD5" HorizontalAlignment="Left" Height="40" Margin="701,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
         <Label Content="Valor cartas:" HorizontalAlignment="Left" Margin="33,167,0,0" VerticalAlignment="Top"/>
         <Label Content="Valor cartas:" HorizontalAlignment="Left" Margin="422,167,0,0" VerticalAlignment="Top"/>
         <TextBlock Name="txtValor1" HorizontalAlignment="Left" Margin="107,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="38" Background="#FFCAFDCF"/>

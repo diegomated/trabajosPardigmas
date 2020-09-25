@@ -27,7 +27,13 @@ namespace Cartas21
         public MainWindow()
         {
             InitializeComponent();
+            d.Randomize();
+            string carta1 = d.Deal();
+            string carta2 = d.Deal();
+            p.Init(carta1, carta2);
 
+            txtcarta1.Text = p.Hand[0];
+            txtcarta2.Text = p.Hand[1];
         }
         
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -36,21 +42,13 @@ namespace Cartas21
             string texto1;
             string texto2 = "";
 
-            txtcarta2.Text = d.Deck[0];
-
-            for(int i = 0; i < baraja.Length; i++)
+            for(int i = 0; i < 52; i++)
             {
                 texto1 = baraja[i];
                 texto2 = texto2 + ", " + texto1;
             }
-
             prueba.Text = texto2;
 
-            
-            string carta1 = d.Deal();
-            p.AddCard(carta1);
-
-            txtcarta1.Text = p.Hand[0];
         }
 
     }

@@ -11,7 +11,7 @@ namespace API
         public Dealer()
         {
             cartas = new Card();
-            deck = Generate();
+            hand = new string[10];
         }
 
         public string[] Deck { get => deck; set => deck = value; }
@@ -20,14 +20,15 @@ namespace API
         public string[] Generate()
         {
             string[] baraja;
-            baraja = new string[14 * 4];
+            baraja = new string[13 * 4];
             int cont = 0;
             string[] suit = cartas.Suit;
             string[] symbol = cartas.Symbol;
+            int[] valor = cartas.Score;
 
             for (int i = 0; i < 4; i++)
             {
-                for (int a = 0; a < 14; a++)
+                for (int a = 0; a < 13; a++)
                 {
                     baraja[cont] = suit[a] + symbol[i];
                     cont = cont + 1;
@@ -39,7 +40,7 @@ namespace API
         public void Randomize()
         {
             string[] listaC;
-            listaC = new string[14*4];
+            listaC = new string[13*4];
             string[] baraja = Generate();
 
             Random numeroAlt = new Random();
@@ -64,15 +65,15 @@ namespace API
             string cont;
             string retorno = deck[0];
 
-            for(int i = 0; i < deck.Length; i++)
+            for (int i = 0; i < 52; i++)
             {
-                if (i == deck.Length - 1)
+                if (i == 52 - 1)
                 {
                     deck[i] = "";
                 }
                 else
                 {
-                    cont = deck[i + 1];
+                    cont = deck[i+1];
                     deck[i] = cont;
                 }
             }
@@ -81,18 +82,12 @@ namespace API
 
         public void AddCard(string carta)
         {
-            hand = new string[10];
-            int cont = 0;
-            while (cont < hand.Length)
+            for (int i = 0; i < hand.Length; i++)
             {
-                if (hand[cont] == null)
+                if (hand[i] == null)
                 {
-                    hand[cont] = carta;
+                    hand[i] = carta;
                     break;
-                }
-                else
-                {
-                    cont = cont + 1;
                 }
             }
         }
