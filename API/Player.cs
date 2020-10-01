@@ -24,7 +24,7 @@ namespace API
                 if (hand[i,0] == null)
                 {
                     hand[i,0] = carta[0];
-                    hand[i, 1] = carta[1];
+                    hand[i,1] = carta[1];
                     break;
                 }
             }

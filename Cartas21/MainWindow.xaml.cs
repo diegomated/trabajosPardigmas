@@ -27,57 +27,46 @@ namespace Cartas21
         public MainWindow()
         {
             InitializeComponent();
+            JuegoInicio();
+            
+        }
+        
+        private void JuegoInicio()
+        {
             d.Randomize();
-
-            string[,] baraja = d.Deck; //
-            string texto1;
-            string texto2 = "";
-
-            for (int i = 0; i < 52; i++)
-            {
-                texto1 = baraja[i,0];
-                texto2 = texto2 + ", " + texto1;
-            }
-            prueba.Text = texto2; //
 
             string[] carta1 = d.Deal();
             string[] carta2 = d.Deal();
             p.Init(carta1, carta2);
 
-            
-            txtcarta1.Text = p.Hand[0,0];
-            txtcarta2.Text = p.Hand[1,0];
-            int valorCard1 = Int16.Parse(p.Hand[0, 1]);
-            int valorCard2 = Int16.Parse(p.Hand[1, 1]);
-
-            txtValor1.Text = (valorCard1 + valorCard2).ToString();
+            txtcarta1.Text = p.Hand[0, 0];
+            txtcarta2.Text = p.Hand[1, 0];
+            txtValor1.Text = (Int16.Parse(p.Hand[0, 1]) + Int16.Parse(p.Hand[1, 1])).ToString();
         }
-        
+
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            string[] carta = d.Deal();
-            p.AddCard(carta);
+            p.AddCard(d.Deal());
 
             txtValor1.Text = "";
 
             txtcarta3.Text = p.Hand[2, 0];
             txtcarta4.Text = p.Hand[3, 0];
             txtcarta5.Text = p.Hand[4, 0];
-            int valorCard1 = Int16.Parse(p.Hand[0, 1]);
-            int valorCard2 = Int16.Parse(p.Hand[1, 1]);
-            int valorCard3 = Int16.Parse(p.Hand[2, 1]);
-            int valorCard4 = Int16.Parse(p.Hand[3, 1]);
-            int valorCard5 = Int16.Parse(p.Hand[4, 1]);
-            txtValor1.Text = (valorCard1 + valorCard2 + valorCard3 + valorCard4 + valorCard5).ToString();
+            txtValor1.Text = (Int16.Parse(p.Hand[0, 1])+ Int16.Parse(p.Hand[1, 1])+ Int16.Parse(p.Hand[2, 1])+ Int16.Parse(p.Hand[3, 1])+ Int16.Parse(p.Hand[4, 1])).ToString();
             int valorCartas = Int16.Parse(txtValor1.Text);
 
             if (valorCartas == 21)
             {
                 MessageBox.Show("Has ganado esta ronda, Felicidades");
+                txtRondasG.Text = (Int16.Parse(txtRondasG.Text) + 1).ToString();
+                reiniciar();
             }
             else if(valorCartas > 21)
             {
                 MessageBox.Show("Has perdido esta ronda, Te pasaste de 21");
+                txtRondasP.Text = (Int16.Parse(txtRondasP.Text) + 1).ToString();
+                reiniciar();
             }
 
         }
@@ -92,82 +81,87 @@ namespace Cartas21
             txtcartaD1.Text = d.Hand[0, 0];
             txtcartaD2.Text = d.Hand[1, 0];
 
-            int valorCard1 = Int16.Parse(d.Hand[0, 1]);
-            int valorCard2 = Int16.Parse(d.Hand[1, 1]);
-            txtValor2.Text = (valorCard1 + valorCard2).ToString();
+            txtValor2.Text = (Int16.Parse(d.Hand[0, 1]) + Int16.Parse(d.Hand[1, 1])).ToString();
             int valorCartas = Int16.Parse(txtValor2.Text);
 
             if (valorCartas == 21)
             {
                 MessageBox.Show("Has perdido, el Dealer hiso 21");
+                valorCartas = 0;
+                txtRondasP.Text = (Int16.Parse(txtRondasP.Text) + 1).ToString();
+                reiniciar();
             }
-
-            MessageBox.Show("El Dealer roba 1 carta");
-            string[] carta3 = d.Deal();
-            d.AddCard(carta3);
-            txtcartaD3.Text = d.Hand[2, 0];
-
-            int valorCard3 = Int16.Parse(d.Hand[2,1]);
-            txtValor2.Text = (valorCartas + valorCard3).ToString();
-            valorCartas = Int16.Parse(txtValor2.Text);
-
-            if (valorCartas == 21)
+            else
             {
-                MessageBox.Show("Has perdido, el Dealer hiso 21");
+                if (valorCartas > 0)
+                {
+                    valorCartas = RobarCartas(txtcartaD3, 2, valorCartas, valorCartasPlayer);
+                }
+                if (valorCartas > 0)
+                {
+                    valorCartas = RobarCartas(txtcartaD4, 3, valorCartas, valorCartasPlayer);
+                }
+                if (valorCartas > 0)
+                {
+                    valorCartas = RobarCartas(txtcartaD5, 4, valorCartas, valorCartasPlayer);
+                }
             }
-            else if(valorCartas>=valorCartasPlayer && valorCartas < 21)
-            {
-                MessageBox.Show("Has perdido, el Delaer saco una mejor mano que tu");
-            }
-            else if (valorCartas > 21)
-            {
-                MessageBox.Show("Has ganado, el Dealer se paso de 21");
-            }
-
-            MessageBox.Show("El Dealer roba 1 carta");
-            string[] carta4 = d.Deal();
-            d.AddCard(carta4);
-            txtcartaD4.Text = d.Hand[3, 0];
-
-            int valorCard4 = Int16.Parse(d.Hand[3, 1]);
-            txtValor2.Text = (valorCartas + valorCard4).ToString();
-            valorCartas = Int16.Parse(txtValor2.Text);
-
-            if (valorCartas == 21)
-            {
-                MessageBox.Show("Has perdido, el Dealer hiso 21");
-            }
-            else if (valorCartas >= valorCartasPlayer && valorCartas < 21)
-            {
-                MessageBox.Show("Has perdido, el Delaer saco una mejor mano que tu");
-            }
-            else if (valorCartas > 21)
-            {
-                MessageBox.Show("Has ganado, el Dealer se paso de 21");
-            }
-
-            MessageBox.Show("El Dealer roba 1 carta");
-            string[] carta5 = d.Deal();
-            d.AddCard(carta5);
-            txtcartaD4.Text = d.Hand[4, 0];
-
-            int valorCard5 = Int16.Parse(d.Hand[4, 1]);
-            txtValor2.Text = (valorCartas + valorCard4).ToString();
-            valorCartas = Int16.Parse(txtValor2.Text);
-
-            if (valorCartas == 21)
-            {
-                MessageBox.Show("Has perdido, el Dealer hiso 21");
-            }
-            else if (valorCartas >= valorCartasPlayer && valorCartas < 21)
-            {
-                MessageBox.Show("Has perdido, el Delaer saco una mejor mano que tu");
-            }
-            else if (valorCartas > 21)
-            {
-                MessageBox.Show("Has ganado, el Dealer se paso de 21");
-            }
-
         }
+        
+
+        public int RobarCartas(TextBox bloque, int numCarta, int valorCartas, int valorCartaP)
+        {
+
+            MessageBox.Show("El Dealer roba 1 carta");
+            d.AddCard(d.Deal());
+            bloque.Text = d.Hand[numCarta, 0];
+
+            int valorCard = Int16.Parse(d.Hand[numCarta, 1]);
+            txtValor2.Text = (valorCartas + valorCard).ToString();
+            valorCartas = Int16.Parse(txtValor2.Text);
+            
+            if (valorCartas == 21)
+            {
+                MessageBox.Show("Has perdido, el Dealer hiso 21");
+                valorCartas = 0;
+                txtRondasP.Text = (Int16.Parse(txtRondasP.Text) + 1).ToString();
+                reiniciar();
+            }
+            else if (valorCartas >= valorCartaP && valorCartas < 21)
+            {
+                MessageBox.Show("Has perdido, el Delaer saco una mejor mano que tu");
+                valorCartas = 0;
+                txtRondasP.Text = (Int16.Parse(txtRondasP.Text) + 1).ToString();
+                reiniciar();
+            }
+            else if (valorCartas > 21)
+            {
+                MessageBox.Show("Has ganado, el Dealer se paso de 21");
+                valorCartas = 0;
+                txtRondasG.Text = (Int16.Parse(txtRondasG.Text) + 1).ToString();
+                reiniciar();
+            }
+            return valorCartas;
+        }
+
+        public void reiniciar()
+        {
+            txtcarta1.Text = "";
+            txtcarta2.Text = "";
+            txtcarta3.Text = "";
+            txtcarta4.Text = "";
+            txtcarta5.Text = "";
+            txtcartaD1.Text = "";
+            txtcartaD2.Text = "";
+            txtcartaD3.Text = "";
+            txtcartaD4.Text = "";
+            txtcartaD5.Text = "";
+            txtValor1.Text = "";
+            txtValor2.Text = "";
+            d = new Dealer();
+            p = new Player();
+            JuegoInicio();
+        }
+
     }
 }
