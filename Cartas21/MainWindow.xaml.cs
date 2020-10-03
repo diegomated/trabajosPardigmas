@@ -49,7 +49,7 @@ namespace Cartas21
 
             if (valorCartas == 21)
             {
-                reiniciar();
+                btnNew.IsEnabled = true;
             }
         }
 
@@ -74,13 +74,17 @@ namespace Cartas21
             {
                 MessageBox.Show("Has ganado esta ronda, Felicidades");
                 txtRondasG.Text = (Int16.Parse(txtRondasG.Text) + 1).ToString();
-                reiniciar();
+                btnNew.IsEnabled = true;
+                btnAdd.IsEnabled = false;
+                btnPtr.IsEnabled = false;
             }
             else if(valorCartas > 21)
             {
                 MessageBox.Show("Has perdido esta ronda, Te pasaste de 21");
                 txtRondasP.Text = (Int16.Parse(txtRondasP.Text) + 1).ToString();
-                reiniciar();
+                btnNew.IsEnabled = true;
+                btnAdd.IsEnabled = false;
+                btnPtr.IsEnabled = false;
             }
         }
 
@@ -102,7 +106,9 @@ namespace Cartas21
                 MessageBox.Show("Has perdido, el Dealer hiso 21");
                 valorCartas = 0;
                 txtRondasP.Text = (Int16.Parse(txtRondasP.Text) + 1).ToString();
-                reiniciar();
+                btnNew.IsEnabled = true;
+                btnAdd.IsEnabled = false;
+                btnPtr.IsEnabled = false;
             }
             else
             {
@@ -149,27 +155,51 @@ namespace Cartas21
                 MessageBox.Show("Has perdido, el Dealer hiso 21");
                 valorCartas = 0;
                 txtRondasP.Text = (Int16.Parse(txtRondasP.Text) + 1).ToString();
-                reiniciar();
+                btnNew.IsEnabled = true;
+                btnAdd.IsEnabled = false;
+                btnPtr.IsEnabled = false;
             }
             else if (valorCartas >= valorCartaP && valorCartas < 21)
             {
                 MessageBox.Show("Has perdido, el Delaer saco una mejor mano que tu");
                 valorCartas = 0;
                 txtRondasP.Text = (Int16.Parse(txtRondasP.Text) + 1).ToString();
-                reiniciar();
+                btnNew.IsEnabled = true;
+                btnAdd.IsEnabled = false;
+                btnPtr.IsEnabled = false;
             }
             else if (valorCartas > 21)
             {
                 MessageBox.Show("Has ganado, el Dealer se paso de 21");
                 valorCartas = 0;
                 txtRondasG.Text = (Int16.Parse(txtRondasG.Text) + 1).ToString();
-                reiniciar();
+                btnNew.IsEnabled = true;
+                btnAdd.IsEnabled = false;
+                btnPtr.IsEnabled = false;
             }
             return valorCartas;
         }
 
-        public void reiniciar()
+        public int revisar(int valorCartas, string[,] mano)
         {
+            string[,] baraja = mano;
+            int valores = valorCartas;
+
+            for(int i = 0; i < 10 / 2; i++)
+            {
+                if(mano[i,1] == "11" && valores>21)
+                {
+                    valores = valores - 10;
+                }
+            }
+            return valores;
+        }
+
+        private void btnNew_Click(object sender, RoutedEventArgs e)
+        {
+            btnNew.IsEnabled = false;
+            btnAdd.IsEnabled = true;
+            btnPtr.IsEnabled = true;
             txtcarta1.Text = "";
             txtcarta2.Text = "";
             txtcarta3.Text = "";
@@ -190,22 +220,5 @@ namespace Cartas21
             p = new Player();
             JuegoInicio();
         }
-
-        public int revisar(int valorCartas, string[,] mano)
-        {
-            string[,] baraja = mano;
-            int valores = valorCartas;
-
-            for(int i = 0; i < 10 / 2; i++)
-            {
-                if(mano[i,1] == "11" && valores>21)
-                {
-                    valores = valores - 10;
-                }
-
-            }
-            return valores;
-        }
-
     }
 }

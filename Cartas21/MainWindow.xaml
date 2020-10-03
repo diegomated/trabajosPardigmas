@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FF60915F">
-        <Button Name="btnAdd" Content="Agregar" HorizontalAlignment="Left" Margin="240,227,0,0" VerticalAlignment="Top" Height="51" Width="106" Click="btnAdd_Click"/>
-        <Button Name="btnPtr" Content="Plantar" HorizontalAlignment="Left" Margin="422,227,0,0" VerticalAlignment="Top" Height="51" Width="106" Click="btnPtr_Click"/>
+        <Button Name="btnAdd" Content="Agregar" HorizontalAlignment="Left" Margin="240,217,0,0" VerticalAlignment="Top" Height="51" Width="106" Click="btnAdd_Click"/>
+        <Button Name="btnPtr" Content="Plantar" HorizontalAlignment="Left" Margin="422,217,0,0" VerticalAlignment="Top" Height="51" Width="106" Click="btnPtr_Click"/>
         <Rectangle HorizontalAlignment="Left" Height="165" Margin="33,28,0,0" Stroke="Black" VerticalAlignment="Top" Width="313" Fill="White"/>
         <Rectangle HorizontalAlignment="Left" Height="165" Margin="422,28,0,0" Stroke="Black" VerticalAlignment="Top" Width="340" Fill="White"/>
         <TextBox Name="txtcarta1" HorizontalAlignment="Left" Height="40" Margin="41,39,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
@@ -31,14 +31,15 @@
         <TextBox Name="txtcartaD6" HorizontalAlignment="Left" Height="40" Margin="449,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
         <TextBox Name="txtcartaD7" HorizontalAlignment="Left" Height="40" Margin="513,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="23"/>
 
-        <Label Content="Valor cartas:" HorizontalAlignment="Left" Margin="33,167,0,0" VerticalAlignment="Top"/>
-        <Label Content="Valor cartas:" HorizontalAlignment="Left" Margin="422,167,0,0" VerticalAlignment="Top"/>
-        <TextBlock Name="txtValor1" HorizontalAlignment="Left" Margin="107,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="38" Background="#FFCAFDCF"/>
+        <Label Content="Valor cartas:" HorizontalAlignment="Left" Margin="33,162,0,0" VerticalAlignment="Top"/>
+        <Label Content="Valor cartas:" HorizontalAlignment="Left" Margin="422,163,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="txtValor1" HorizontalAlignment="Left" Margin="107,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="38" Background="#FFC7E5B7"/>
         <TextBlock Name="txtValor2" HorizontalAlignment="Left" Margin="501,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="38" Background="#FFC7E5B7"/>
-        <Label Content="Ganadas" HorizontalAlignment="Left" Margin="290,291,0,0" VerticalAlignment="Top"/>
-        <Label Content="Perdidas" HorizontalAlignment="Left" Margin="423,291,0,0" VerticalAlignment="Top"/>
-        <TextBlock Name="txtRondasG" HorizontalAlignment="Left" Height="41" Margin="284,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="White" TextAlignment="Center" FontSize="30" Text="0"/>
-        <TextBlock Name="txtRondasP" HorizontalAlignment="Left" Margin="423,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="62" Background="White" Text="0" FontSize="30" TextAlignment="Center"/>
+        <Label Content="Ganadas" HorizontalAlignment="Left" Margin="290,278,0,0" VerticalAlignment="Top"/>
+        <Label Content="Perdidas" HorizontalAlignment="Left" Margin="423,278,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="txtRondasG" HorizontalAlignment="Left" Height="41" Margin="284,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Background="White" TextAlignment="Center" FontSize="30" Text="0"/>
+        <TextBlock Name="txtRondasP" HorizontalAlignment="Left" Margin="422,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="62" Background="White" Text="0" FontSize="30" TextAlignment="Center"/>
+        <Button Name="btnNew" Content="Nueva Partida" HorizontalAlignment="Left" Height="40" Margin="318,366,0,0" VerticalAlignment="Top" Width="135" Click="btnNew_Click" IsEnabled="False"/>
 
     </Grid>
 </Window>
